@@ -1,17 +1,16 @@
 import React from 'react';
 import './App.css';
 import {LoginPage} from "./LoginPage";
-import {Col, Container, Row} from "react-bootstrap";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
+const router = createBrowserRouter([
+    {path: "/", element: <LoginPage/>}, // Change this to be the home page when it is ready
+    {path: "/login", element: <LoginPage/>}
+])
 
 function App() {
     return (
-        <Container fluid>
-            <Row>
-                <Col/>
-                <Col><LoginPage/></Col>
-                <Col/>
-            </Row>
-        </Container>
+        <RouterProvider router={router}/>
     );
 }
 
