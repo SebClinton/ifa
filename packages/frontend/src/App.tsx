@@ -2,17 +2,18 @@ import React from 'react';
 import './App.css';
 import {LoginPage} from "./LoginPage";
 import {Col, Container, Row} from "react-bootstrap";
+import {HomePage} from "./HomePage";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-function App() {
+const router = createBrowserRouter([
+    {path: "/", element: <HomePage/>},
+    {path: "/login", element: <LoginPage/>}
+])
+
+const App: React.FC = () => {
     return (
-        <Container fluid>
-            <Row>
-                <Col/>
-                <Col><LoginPage/></Col>
-                <Col/>
-            </Row>
-        </Container>
+        <RouterProvider router={router}/>
     );
-}
+  };
 
 export default App;
