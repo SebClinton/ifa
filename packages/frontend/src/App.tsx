@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
 import {LoginPage} from "./LoginPage";
-import {Col, Container, Row} from "react-bootstrap";
 import {HomePage} from "./HomePage";
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 const router = createBrowserRouter([
     {path: "/", element: <HomePage/>},
@@ -14,6 +13,6 @@ const App: React.FC = () => {
     return (
         <RouterProvider router={router}/>
     );
-  };
+};
 
 export default App;
